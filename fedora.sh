@@ -10,3 +10,16 @@ sudo dnf install python3 python3-pip neofetch ranger nmap emacs vim neovim zip m
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.visualstudio.code -y
+
+mkdir -p ~/.config/kanshi && touch ~/.config/kanshi/config
+
+profile {
+	output eDP-1 disable
+	output DP-1 mode 1920x1080@60.000Hz position 0,0
+}
+
+profile {
+	output eDP-1 position 0,0
+}
+
+kanshi
