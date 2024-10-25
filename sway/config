@@ -208,6 +208,13 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Custom key bindings
+bindsym $mod+ctrl+p exec systemctl poweroff
+bindsym $mod+ctrl+r exec systemctl reboot
+bindsym $mod+ctrl+s exec systemctl suspend
+bindsym $mod+n exec thunar
+bindsym $mod+m exec firefox 
+
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d
 #  - /etc/sway/config.d
