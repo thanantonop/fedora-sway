@@ -25,7 +25,7 @@ set $rofi_cmd rofi \
 # Shows a combined list of the applications with desktop files and
 # executables from PATH.
 # TODO: add window with the next release of rofi-wayland
-set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
+set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi -show-icons 
 
 ### Output configuration
 #
@@ -78,7 +78,7 @@ input type:keyboard {
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
@@ -214,6 +214,50 @@ bindsym $mod+ctrl+r exec systemctl reboot
 bindsym $mod+ctrl+s exec systemctl suspend
 bindsym $mod+n exec thunar
 bindsym $mod+m exec firefox 
+
+##############################
+# extra options for windows: #
+##############################
+
+#border indicator on windows:
+#new_window pixel 1
+
+# thin borders
+# hide_edge_borders both
+ font pango:MesloLGS Nerd Font Mono 10
+default_border none
+default_floating_border none
+default_border pixel 2 
+titlebar_padding 1
+titlebar_border_thickness 0
+# Set inner/outer gaps
+gaps inner 6
+gaps outer 3
+
+######################################
+# color settings for bar and windows #
+######################################
+
+# Define colors variables:
+set $darkbluetrans	#08052be6
+set $darkblue		#08052b
+set $lightblue		#5294e2
+set $urgentred		#e53935
+set $white		#ffffff
+set $black		#000000
+set $purple		#e345ff
+set $darkgrey		#383c4a
+set $grey		#b0b5bd
+set $mediumgrey		#8b8b8b
+set $yellowbrown	#e1b700
+set $darkred		#770000
+
+# define colors for windows:
+#class		        	border		bground		text		indicator	child_border
+client.focused		    	$purple	 	$darkblue	$white		$mediumgrey	$purple
+client.unfocused	    	$mediumgrey	$darkblue	$grey		$darkgrey	$mediumgrey
+client.focused_inactive		$darkblue	$darkblue	$grey		$black		$black
+client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
 
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d
