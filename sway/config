@@ -31,7 +31,8 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi -show-icons
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg
-output * bg /usr/share/backgrounds/default.png fill
+#output * bg /usr/share/backgrounds/default.png fill
+output * bg $HOME/Pictures/backgrounds/bg.jpg fill
 #
 # Example configuration:
 #
@@ -224,7 +225,7 @@ bindsym $mod+m exec firefox
 
 # thin borders
 # hide_edge_borders both
- font pango:MesloLGS Nerd Font Mono 10
+font pango:MesloLGS Nerd Font Mono 10
 default_border none
 default_floating_border none
 default_border pixel 2 
