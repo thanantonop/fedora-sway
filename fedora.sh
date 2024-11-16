@@ -22,6 +22,8 @@ unzip Meslo.zip -d ~/.fonts
 cd ~
 cd ~/Downloads/fedora-sway/
 cp -R sway waybar foot kanshi kitty ~/.config
+cp -R backgrounds ~/Pictures
+cd ~
 
 mkdir -p ~/.config/kanshi && touch ~/.config/kanshi/config
 profile {
