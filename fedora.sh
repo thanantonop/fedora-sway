@@ -19,8 +19,11 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip
 unzip FiraCode.zip -d ~/.fonts
 unzip Meslo.zip -d ~/.fonts
 
-mkdir -p ~/.config/kanshi && touch ~/.config/kanshi/config
+cd ~
+cd ~/Downloads/fedora-sway/
+cp -R sway waybar foot kanshi kitty ~/.config
 
+mkdir -p ~/.config/kanshi && touch ~/.config/kanshi/config
 profile {
 	output eDP-1 disable
 	output DP-1 mode 1920x1080@60.000Hz position 0,0
